@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int euclides(int a, int b) {
+    int mcd, rest, divs;
+    divs = (a / b);
+    rest = (a % b);
+    mcd = divs + rest;
+    printf("Divisio: %d, Resta: %d", divs, rest);
+
+    return mcd;
+}
+
+int main() {
+    int a, b, mcd;
+    printf("Introduiex el primer nombre: ");
+    scanf("%d", &a);
+    printf("Introduiex el segon nombre: ");
+    scanf("%d", &b);
+
+    mcd = euclides(a, b);
+
+    printf("MCD: %d\n", mcd);
+
+    return 0;
+}
